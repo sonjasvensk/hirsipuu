@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML5 Canvas</h1>
+<h2>The arc() Method</h2>
+
+<canvas id="myCanvas" width="320" height="320" style="border:1px solid grey"></canvas>
+
+<script>
+const c = document.getElementById("myCanvas");
+const ctx = c.getContext("2d");
+
+ctx.beginPath();
+ctx.moveTo(20, 300)
+ctx.lineTo(300, 300)
+ctx.moveTo(200, 5)
+ctx.lineTo(200, 300)
+ctx.moveTo(90, 5)
+ctx.lineTo(200, 5)
+ctx.moveTo(100, 5)
+ctx.lineTo(100, 51)
+ctx.stroke();
+ctx.closePath();
+ctx.beginPath();
+ctx.arc(100, 100, 50, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.closePath();
+ctx.beginPath();
+ctx.moveTo(100, 150);
+ctx.lineTo(100, 220);
+ctx.moveTo(100, 220);
+ctx.lineTo(70, 270);
+ctx.moveTo(100, 220);
+ctx.lineTo(130, 270);
+ctx.moveTo(100, 170);
+ctx.lineTo(50, 150);
+ctx.moveTo(100, 170);
+ctx.lineTo(150, 150);
+ctx.stroke();
+
+</script> 
+
+</body>
+</html>
