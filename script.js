@@ -17,5 +17,5 @@
 //      Jos kaikki kirjaimet on arvattu oikein:
 //          Näytä "Voitit!" & joku ”palkinto”, esim. alerttina ”juhlat” tms
 
-//      Jos virheiden määrä saavuttaa maksimin (esim. 6):
+//      Jos virheiden määrä saavuttaa maksimin (kun ukkeli piirretty):
 //          Näytä "Hävisit! Sana oli: XXXXX" & esim. alerttina pääkallo/hautakivi tms.
