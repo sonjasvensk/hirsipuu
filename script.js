@@ -19,3 +19,5 @@
 
 //      Jos virheiden määrä saavuttaa maksimin (kun ukkeli piirretty):
 //          Näytä "Hävisit! Sana oli: XXXXX" & esim. alerttina pääkallo/hautakivi tms.
+
+// Kategorioita: Hedelmät (omena, ananas, banaani, kurkku) Autot (Toyota, Fiat, Volvo, Saab)
