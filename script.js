@@ -37,10 +37,15 @@ let väärinarvatut = "";
 let arvaukset = "";
 let arvattavaSana = "";
 
-    function uusiPeli() { // Tyhjentää pelikentän, hakee pelattavan sanan
+
+
+function uusiPeli() { // Tyhjentää pelikentän, hakee pelattavan sanan
 
     }
-
+    
+function arvattavaSana() {
+    
+}
 function arvaaSana() {
     let arvattuSana = document.getElementById("arvattuSana").value;
     let result = arvattuSana.toLowerCase().trim();
