@@ -37,20 +37,21 @@ let väärinarvatut = "";
 let arvaukset = "";
 let arvattavaSana = "";
 
-    function uusiPeli() {
+    function uusiPeli() { // Tyhjentää pelikentän, hakee pelattavan sanan
 
     }
 
 function arvaaSana() {
     let arvattuSana = document.getElementById("arvattuSana").value;
-    if (arvattuSana == arvattavaSana) {
-        alert("Arvasit oikein! Voitit pelin!")
+    let result = arvattuSana.toLowerCase().trim();
+    if (result == arvattavaSana) {
+        function voitto(arvattavaSana)
     }
     else {
-        alert("Arvasit väärin. Game Over.")
+        function gameOver (arvattavaSana)
     }
 }
-function arvaaKirjain(kirjain, sanat) {
+function arvaaKirjain(kirjain, sanat) { // tarkistaa että kirjain löytyykö kirjain sanasta EI ja KYLLÄ
     let taulukko = //sana pitää rikkoa kirjaimiksi
     for (let i = 0; i < taulukko.length; i++) {
         if (kirjain == taulukko[i]) {
@@ -59,15 +60,15 @@ function arvaaKirjain(kirjain, sanat) {
     }
 }
 
-function piirräUkko() {
+function piirräUkko() { // 
 
 }
 
-function gameOver() {
+function gameOver() { // 1. Jos arvaa sanan väärin 2. Jos arvaa kirjaimet väärin
 
 }
 
-function voitto() {
+function voitto() { // 1. Jos arvaa sanan oikein 2. Jos arvaa kirjaimet oikein
 
 }
 
