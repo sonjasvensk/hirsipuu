@@ -42,10 +42,10 @@ function arvaaSana() {
     let arvattuSana = document.getElementById("arvattuSana").value;
     let result = arvattuSana.toLowerCase().trim();
     if (result == arvattavaSana) {
-        function voitto(arvattavaSana)
+        voitto(arvattavaSana);
     }
     else {
-        function gameOver (arvattavaSana)
+        gameOver(arvattavaSana);
     }
 }
 function arvaaKirjain(arvattavaSana) { // tarkistaa että kirjain löytyykö kirjain sanasta EI ja KYLLÄ
