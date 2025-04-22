@@ -45,7 +45,7 @@ function arvaaSana() {
         function voitto(arvattavaSana)
     }
     else {
-        function gameOver (arvattavaSana)
+        function gameOver(arvattavaSana)
     }
 }
 function arvaaKirjain(kirjain, arvattavaSana) { // tarkistaa että kirjain löytyykö kirjain sanasta EI ja KYLLÄ
