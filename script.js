@@ -58,12 +58,20 @@ function arvaaSana() {
         alert("Arvasit väärin. Game Over.")
     }
 }
-function arvaaKirjain(kirjain, sanat) {
-    let taulukko = //sana pitää rikkoa kirjaimiksi
+function arvaaKirjain(kirjain, arvattavaSana) {
+    let syote = kirjain
+    let tarkiste="";
     for (let i = 0; i < taulukko.length; i++) {
-        if (kirjain == taulukko[i]) {
+        if (syote == taulukko[i]) {
             document.getElementById("").innerHTML= taulukko[i];
+            arvaukset.push(taulukko[i]);
+            tarkiste="OK";
         }
+    }
+    if (tarkiste == "OK") {
+
+    } else {
+        piirräUkko();
     }
 }
 
