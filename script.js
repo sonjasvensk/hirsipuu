@@ -58,8 +58,13 @@ function arvaaSana() {
         alert("Arvasit väärin. Game Over.")
     }
 }
-function arvaaKirjain() {
-
+function arvaaKirjain(kirjain, sanat) {
+    let taulukko = //sana pitää rikkoa kirjaimiksi
+    for (let i = 0; i < taulukko.length; i++) {
+        if (kirjain == taulukko[i]) {
+            document.getElementById("").innerHTML= taulukko[i];
+        }
+    }
 }
 
 function piirräUkko() {
