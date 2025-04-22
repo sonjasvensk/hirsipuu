@@ -21,15 +21,7 @@
 //          Näytä "Hävisit! Sana oli: XXXXX" & esim. alerttina pääkallo/hautakivi tms.
 
 
-//      Funktiot:
-//  -arvaaSana()
-//  -uusiPeli()
-//  -arvaaKirjain()
-//  -piirräUkko()
 //  -piirräSeuraava()
-//  -
-//  -gameOver()
-//  -voitto()
 
 let sanat = [relaatiotietokanta, ratkaisuarkkitehti, heuristiikka, palvelumuotoilu, parametri, välimuisti, sovellusvirtualisointi, javascript, projektipäällikkö, analytiikka];
 let kirjaimet = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, x, y, z, å, ä, ö];
@@ -39,10 +31,10 @@ let arvattavaSana = "";
 
 
 
-function uusiPeli() { // Tyhjentää pelikentän, hakee pelattavan sanan
+function uusiPeli() { // Tyhjentää pelikentän, hakee pelattavan sanan + piirtää puun
 
     }
-    
+
 function arvattavaSana() {
     
 }
@@ -73,7 +65,7 @@ function arvaaKirjain(kirjain, arvattavaSana) { // tarkistaa että kirjain löyt
     }
 }
 
-function piirräUkko() { // 
+function piirräUkko() { // piirtää palasen  
 
 }
 function sananTarkistus() {
