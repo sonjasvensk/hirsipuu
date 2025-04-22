@@ -39,12 +39,10 @@
 //  -gameOver()
 //  -voitto()
 
-// 
-
 let sanat = [relaatiotietokanta, ratkaisuarkkitehti, heuristiikka, palvelumuotoilu, parametri, välimuisti, sovellusvirtualisointi, javascript, projektipäällikkö, analytiikka];
 let kirjaimet = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, x, y, z, å, ä, ö];
-let väärinarvatut = ;
-let arvaukset = ;
+let väärinarvatut = "";
+let arvaukset = "";
 let arvattavaSana = "";
 
     function uusiPeli() {
