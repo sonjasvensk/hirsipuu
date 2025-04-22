@@ -51,7 +51,7 @@ let arvattavaSana = "";
 
 function arvaaSana() {
     let arvattuSana = document.getElementById("arvattuSana").value;
-    if (arvattuSana == PELISANA) {
+    if (arvattuSana == arvattavaSana) {
         alert("Arvasit oikein! Voitit pelin!")
     }
     else {
