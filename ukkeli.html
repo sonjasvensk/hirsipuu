@@ -12,40 +12,43 @@
         const ctx = c.getContext("2d");
 
         ctx.beginPath();
-        //maa
+        //puu
         ctx.moveTo(20, 300)
         ctx.lineTo(300, 300)
-        //puu vertikaali
         ctx.moveTo(200, 5)
         ctx.lineTo(200, 300)
-        //puu horisontaali
         ctx.moveTo(90, 5)
         ctx.lineTo(200, 5)
+        ctx.stroke();
+        ctx.closePath();
         //köysi
+        ctx.beginPath();
         ctx.moveTo(100, 5)
         ctx.lineTo(100, 51)
         ctx.stroke();
         ctx.closePath();
-    
         ctx.beginPath();
         //pää
         ctx.arc(100, 100, 50, 0, 2 * Math.PI);
         ctx.stroke();
         ctx.closePath();
-
         ctx.beginPath();
         //kroppa
         ctx.moveTo(100, 150);
         ctx.lineTo(100, 220);
+        ctx.stroke();
         //vasen jalka
         ctx.moveTo(100, 220);
         ctx.lineTo(70, 270);
+        ctx.stroke();
         //oikea jalka
         ctx.moveTo(100, 220);
         ctx.lineTo(130, 270);
+        ctx.stroke();
         //vasen käsi
         ctx.moveTo(100, 170);
         ctx.lineTo(50, 150);
+        ctx.stroke();
         //oikea käsi
         ctx.moveTo(100, 170);
         ctx.lineTo(150, 150);
