@@ -76,7 +76,20 @@ function piirräUkko() { // piirtää palasen
 //}
 
 function sananTarkistus(arvattavaSana) { //tarkistaa onko kaikki oikeat kirjaimet löydetty
-    
+    let a = 0;
+    for(let i= 0; i < arvattavaSana.length; i++) { // käy kaikki sanan kirjaimet läpi yksitellen
+        for (let i = 0; i < arvaukset.length; i++) { 
+            if (arvattavasana[i] == arvaukset[i]) { // tarkistaa kuinka moni kirjain löytyy jo arvatut taulukosta
+                a++; // laskuri laskee kaikki kirjaimet jotka on jo arvattu 
+            }
+        }
+    }
+    if (a == arvattavaSana.length) { //vertaa laskurin arvoa arvattavan sanan pituuteen
+        voitto(arvattavaSana); 
+    }
+    else {
+        return;
+    }
 }
 
 function gameOver(arvattavaSana) { // 1. Jos arvaa sanan väärin 2. Jos arvaa kirjaimet väärin
