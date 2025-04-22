@@ -56,7 +56,7 @@ function arvaaKirjain(arvattavaSana) { // tarkistaa että kirjain löytyykö kir
     for (let i = 0; i < taulukko.length; i++) {
         if (syote == taulukko[i]) {
             document.getElementById("").innerHTML= taulukko[i];
-            arvaukset.push(taulukko[i]);
+            arvaukset.push(syote);
             tarkiste="OK";
         }
     }
@@ -75,8 +75,8 @@ function piirräUkko() { // piirtää palasen
 
 //}
 
-function sananTarkistus() { //tarkistaa onko kaikki oikeat kirjaimet löydetty
-
+function sananTarkistus(arvattavaSana) { //tarkistaa onko kaikki oikeat kirjaimet löydetty
+    
 }
 
 function gameOver() { // 1. Jos arvaa sanan väärin 2. Jos arvaa kirjaimet väärin
