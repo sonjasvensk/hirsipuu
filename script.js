@@ -24,7 +24,7 @@
 //  -let sanat = []
 //  -let arvattavaSana = ""
 //  -let kirjaimet = ["a", "b" jne.]
-//  -let virheet = 
+//  -let väärinarvatut = 
 //  -let arvaukset =
 //  -let 
 
@@ -39,19 +39,24 @@
 //  -gameOver()
 //  -voitto()
 
-// 
+let sanat = [relaatiotietokanta, ratkaisuarkkitehti, heuristiikka, palvelumuotoilu, parametri, välimuisti, sovellusvirtualisointi, javascript, projektipäällikkö, analytiikka];
+let kirjaimet = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, x, y, z, å, ä, ö];
+let väärinarvatut = "";
+let arvaukset = "";
+let arvattavaSana = "";
 
-function uusiPeli() {
+    function uusiPeli() {
 
-}
+    }
 
 function arvaaSana() {
-let arvattuSana= document.getElementById("arvattuSana").value;
-if (arvattuSana == PELISANA ) {
-alert("Arvasit oikein! Voitit pelin!")
-}
-else { alert("Arvasit väärin. Game Over.")
-}
+    let arvattuSana = document.getElementById("arvattuSana").value;
+    if (arvattuSana == PELISANA) {
+        alert("Arvasit oikein! Voitit pelin!")
+    }
+    else {
+        alert("Arvasit väärin. Game Over.")
+    }
 }
 function arvaaKirjain(kirjain, sanat) {
     let taulukko = //sana pitää rikkoa kirjaimiksi
@@ -71,7 +76,7 @@ function gameOver() {
 }
 
 function voitto() {
-    
+
 }
 
 
