@@ -46,9 +46,13 @@ function uusiPeli() {
 }
 
 function arvaaSana() {
-
+let arvattuSana= document.getElementById("arvattuSana").value;
+if (arvattuSana == PELISANA ) {
+alert("Arvasit oikein! Voitit pelin!")
 }
-
+else { alert("Arvasit väärin. Game Over.")
+}
+}
 function arvaaKirjain() {
 
 }
