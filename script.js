@@ -57,7 +57,7 @@ function arvaaSana() {
     }
 }
 function arvaaKirjain(kirjain, arvattavaSana) { // tarkistaa että kirjain löytyykö kirjain sanasta EI ja KYLLÄ
-    let syote = kirjain
+    let syote = kirjain.toLowerCase().trim();
     let tarkiste="";
     for (let i = 0; i < taulukko.length; i++) {
         if (syote == taulukko[i]) {
@@ -67,7 +67,7 @@ function arvaaKirjain(kirjain, arvattavaSana) { // tarkistaa että kirjain löyt
         }
     }
     if (tarkiste == "OK") {
-
+        sananTarkistus(arvattavaSana);
     } else {
         piirräUkko();
     }
@@ -75,6 +75,9 @@ function arvaaKirjain(kirjain, arvattavaSana) { // tarkistaa että kirjain löyt
 
 function piirräUkko() { // 
 
+}
+function sananTarkistus() {
+    
 }
 
 function gameOver() { // 1. Jos arvaa sanan väärin 2. Jos arvaa kirjaimet väärin
