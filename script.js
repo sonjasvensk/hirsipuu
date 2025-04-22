@@ -20,14 +20,6 @@
 //      Jos virheiden määrä saavuttaa maksimin (kun ukkeli piirretty):
 //          Näytä "Hävisit! Sana oli: XXXXX" & esim. alerttina pääkallo/hautakivi tms.
 
-//      Variaabelit:
-//  -let sanat = []
-//  -let arvattavaSana = ""
-//  -let kirjaimet = ["a", "b" jne.]
-//  -let väärinarvatut = 
-//  -let arvaukset =
-//  -let 
-
 
 //      Funktiot:
 //  -arvaaSana()
@@ -45,20 +37,26 @@ let väärinarvatut = "";
 let arvaukset = "";
 let arvattavaSana = "";
 
-    function uusiPeli() {
+
+
+function uusiPeli() { // Tyhjentää pelikentän, hakee pelattavan sanan
 
     }
-
+    
+function arvattavaSana() {
+    
+}
 function arvaaSana() {
     let arvattuSana = document.getElementById("arvattuSana").value;
-    if (arvattuSana == PELISANA) {
-        alert("Arvasit oikein! Voitit pelin!")
+    let result = arvattuSana.toLowerCase().trim();
+    if (result == arvattavaSana) {
+        function voitto(arvattavaSana)
     }
     else {
-        alert("Arvasit väärin. Game Over.")
+        function gameOver (arvattavaSana)
     }
 }
-function arvaaKirjain(kirjain, arvattavaSana) {
+function arvaaKirjain(kirjain, arvattavaSana) { // tarkistaa että kirjain löytyykö kirjain sanasta EI ja KYLLÄ
     let syote = kirjain
     let tarkiste="";
     for (let i = 0; i < taulukko.length; i++) {
@@ -75,15 +73,15 @@ function arvaaKirjain(kirjain, arvattavaSana) {
     }
 }
 
-function piirräUkko() {
+function piirräUkko() { // 
 
 }
 
-function gameOver() {
+function gameOver() { // 1. Jos arvaa sanan väärin 2. Jos arvaa kirjaimet väärin
 
 }
 
-function voitto() {
+function voitto() { // 1. Jos arvaa sanan oikein 2. Jos arvaa kirjaimet oikein
 
 }
 
