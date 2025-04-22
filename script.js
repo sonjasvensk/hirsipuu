@@ -20,4 +20,49 @@
 //      Jos virheiden määrä saavuttaa maksimin (kun ukkeli piirretty):
 //          Näytä "Hävisit! Sana oli: XXXXX" & esim. alerttina pääkallo/hautakivi tms.
 
-// Kategorioita: Hedelmät (omena, ananas, banaani, kurkku) Autot (Toyota, Fiat, Volvo, Saab)
+//      Variaabelit:
+//  -let sanat = []
+//  -let arvattavaSana = ""
+//  -let kirjaimet = ["a", "b" jne.]
+//  -let virheet = 
+//  -let arvaukset =
+//  -let 
+
+
+//      Funktiot:
+//  -arvaaSana()
+//  -uusiPeli()
+//  -arvaaKirjain()
+//  -piirräUkko()
+//  -piirräSeuraava()
+//  -
+//  -gameOver()
+//  -voitto()
+
+// 
+
+function uusiPeli() {
+
+}
+
+function arvaaSana() {
+
+}
+
+function arvaaKirjain() {
+
+}
+
+function piirräUkko() {
+
+}
+
+function gameOver() {
+
+}
+
+function voitto() {
+    
+}
+
+
