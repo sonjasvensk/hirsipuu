@@ -72,12 +72,12 @@ function sananTarkistus() {
     
 }
 
-function gameOver() { // 1. Jos arvaa sanan väärin 2. Jos arvaa kirjaimet väärin
-
+function gameOver(arvattavaSana) { // 1. Jos arvaa sanan väärin 2. Jos arvaa kirjaimet väärin
+alert("Hävisit pelin!");
 }
 
-function voitto() { // 1. Jos arvaa sanan oikein 2. Jos arvaa kirjaimet oikein
-
+function voitto(arvattavaSana) { // 1. Jos arvaa sanan oikein 2. Jos arvaa kirjaimet oikein
+alert("Onneksi olkoon! Voitit pelin!");
 }
 
 
