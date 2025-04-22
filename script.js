@@ -20,14 +20,6 @@
 //      Jos virheiden määrä saavuttaa maksimin (kun ukkeli piirretty):
 //          Näytä "Hävisit! Sana oli: XXXXX" & esim. alerttina pääkallo/hautakivi tms.
 
-//      Variaabelit:
-//  -let sanat = []
-//  -let arvattavaSana = ""
-//  -let kirjaimet = ["a", "b" jne.]
-//  -let väärinarvatut = 
-//  -let arvaukset =
-//  -let 
-
 
 //      Funktiot:
 //  -arvaaSana()
