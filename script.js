@@ -28,11 +28,24 @@ let kirjaimet = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, 
 let väärinarvatut = "";
 let arvaukset = "";
 let arvattavaSana = "";
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext("2d");
 
 
 
 function uusiPeli() { // Tyhjentää pelikentän, hakee pelattavan sanan + piirtää puun
-
+    
+    //puu
+    ctx.strokeStyle = "black";
+    ctx.beginPath();
+    ctx.moveTo(20, 300)
+    ctx.lineTo(300, 300)
+    ctx.moveTo(200, 5)
+    ctx.lineTo(200, 300)
+    ctx.moveTo(90, 5)
+    ctx.lineTo(200, 5)
+    ctx.stroke();
+    ctx.closePath();
     }
 
 function arvattavaSana() {
