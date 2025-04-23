@@ -22,7 +22,7 @@
 
 //  -piirräSeuraava()
 
-let sanat = [
+let sanat = [ // vaihdoin nämä stringeiksi
   "relaatiotietokanta",
   "ratkaisuarkkitehti",
   "heuristiikka",
@@ -34,7 +34,7 @@ let sanat = [
   "projektipäällikkö",
   "analytiikka",
 ];
-let kirjaimet = [
+let kirjaimet = [ //vaihdoin nämä srtingeiksi
   "a",
   "b",
   "c",
@@ -64,15 +64,19 @@ let kirjaimet = [
   "ä",
   "ö",
 ];
-let väärinarvatut = "";
-let arvaukset = "";
+let väärinArvatut = []; //vaihdoin taulukoksi
+let arvaukset = []; //vaihdoin taulukoksi
 let arvattavaSana = "";
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 
-function uusiPeli(arvattavaSana) {
-  // Tyhjentää pelikentän, hakee pelattavan sanan + piirtää puun
+function uusiPeli() {
+  // Tyhjentää pelikentän, hakee pelattavan sanan  + piirtää puun
+  arvattavaSana = sanat[Math.floor(Math.random() * sanat.length)]; //poistin sen arvattavaSana funktion, koska siihen tuli vain yksi rivi ja sen voi tehdä täällä
+  arvaukset = []; //tyhjentää arvaukset
+  väärinArvatut = []; //tyhjentää väärinarvatut
 
+  ctx.clearRect(0, 0, canvas.width, canvas.height); //tyhjentää pelikentän
   //puu
   ctx.strokeStyle = "black";
   ctx.beginPath();
@@ -86,11 +90,6 @@ function uusiPeli(arvattavaSana) {
   ctx.closePath();
 }
 
-function valittuSana() {
-  // vaihdoin tämän funktion nimen, koska oli ongelmallista, että myös muuttujan nimi oli sama
-  arvattavaSana = sanat[Math.floor(Math.random() * sanat.length)];
-  uusiPeli(arvattavaSana);
-}
 function arvaaSana() {
   let arvattuSana = document.getElementById("arvattuSana").value;
   let result = arvattuSana.toLowerCase().trim();
@@ -122,39 +121,59 @@ function arvaaKirjain(arvattavaSana) {
 }
 
 function piirräUkko() {
+let virheet = väärinArvatut.length; 
+ctx.strokeStyle= "black";
   // piirtää palasen
-  //köysi
+  // köysi
+  if (virheet == 1) {
   ctx.beginPath();
   ctx.moveTo(100, 5);
   ctx.lineTo(100, 51);
   ctx.stroke();
   ctx.closePath();
-  ctx.beginPath();
+  }
   //pää
+  else if (virheet == 2) {
+  ctx.beginPath();
   ctx.arc(100, 100, 50, 0, 2 * Math.PI);
   ctx.stroke();
   ctx.closePath();
-  ctx.beginPath();
+  }
   //kroppa
+  else if (virheet == 3) {
+  ctx.beginPath();
   ctx.moveTo(100, 150);
   ctx.lineTo(100, 220);
   ctx.stroke();
+  }
   //vasen jalka
+  else if (virheet == 4) {
   ctx.moveTo(100, 220);
   ctx.lineTo(70, 270);
   ctx.stroke();
+  }
   //oikea jalka
+  else if (virheet == 5) {
   ctx.moveTo(100, 220);
   ctx.lineTo(130, 270);
   ctx.stroke();
+  }
   //vasen käsi
+  else if (virheet == 6) {
   ctx.moveTo(100, 170);
   ctx.lineTo(50, 150);
   ctx.stroke();
+  }
   //oikea käsi
+  else if (virheet == 7) {
   ctx.moveTo(100, 170);
   ctx.lineTo(150, 150);
   ctx.stroke();
+  }
+
+  if (virheet > 7) {  // jos virheitä yli 7 (ukko valmis) gameover
+    gameOver(arvattavaSana);
+  }
 }
 
 // function kirjaimenTarkistus() {
@@ -167,7 +186,7 @@ function sananTarkistus(arvattavaSana) {
   for (let i = 0; i < arvattavaSana.length; i++) {
     // käy kaikki sanan kirjaimet läpi yksitellen
     for (let i = 0; i < arvaukset.length; i++) {
-      if (arvattavasana[i] == arvaukset[i]) {
+      if (arvattavaSana[i] == arvaukset[i]) {
         // tarkistaa kuinka moni kirjain löytyy jo arvatut taulukosta
         a++; // laskuri laskee kaikki kirjaimet jotka on jo arvattu
       }
