@@ -52,14 +52,15 @@ function arvaaKirjain(arvattavaSana) { // tarkistaa että kirjain löytyykö kir
     let kirjain = document.getElementById("kirjain").value;
     let syote = kirjain.toLowerCase(); 
       //  kirjaimenTarkistus();
-    let tarkiste="";
-    for (let i = 0; i < taulukko.length; i++) {
-        if (syote == taulukko[i]) {
-            document.getElementById("").innerHTML= taulukko[i];
-            arvaukset.push(syote);
+    arvaukset.push(syote);
+    let tarkiste=""; 
+    for (let i = 0; i < arvattavaSana.length; i++) {
+        if (syote == arvattavaSana[i]) {
+            document.getElementById("").innerHTML= arvattavaSana[i];
             tarkiste="OK";
         }
     }
+    document.getElementById("").innerHTML = syote;
     if (tarkiste == "OK") {
         sananTarkistus(arvattavaSana);
     } else {
@@ -85,7 +86,7 @@ function sananTarkistus(arvattavaSana) { //tarkistaa onko kaikki oikeat kirjaime
         }
     }
     if (a == arvattavaSana.length) { //vertaa laskurin arvoa arvattavan sanan pituuteen
-        voitto(arvattavaSana); 
+        voitto(arvattavaSana); // Mikäli kaikki kirjaimet oli jo arvattu --> voitto
     }
     else {
         return;
