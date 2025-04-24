@@ -123,10 +123,7 @@ function arvaaKirjain(arvattavaSana) {
     if (syote == arvattavaSana[i]) {
       tarkiste = "OK";
     }
-
-    document.getElementById("arvattavaSana").innerHTML = arvattavaSana[i];
   }
-  document.getElementById("").innerHTML = syote;
 
   if (tarkiste == "OK") {
     arvaukset.push(syote); // siirtää kirjaimen arvattuihin
