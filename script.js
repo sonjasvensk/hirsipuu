@@ -75,7 +75,6 @@ function uusiPeli() {
     arvattavaSana = sanat[Math.floor(Math.random() * sanat.length)]; //poistin sen arvattavaSana funktion, koska siihen tuli vain yksi rivi ja sen voi tehdä täällä
     arvaukset = []; //tyhjentää arvaukset
     väärinArvatut = []; //tyhjentää väärinarvatut
-    document.getElementById("kirjain").focus();  // autofokus kenttään
     ctx.clearRect(0, 0, canvas.width, canvas.height); //tyhjentää pelikentän
     //puu
     ctx.strokeStyle = "black";
@@ -89,7 +88,7 @@ function uusiPeli() {
     ctx.stroke();
     ctx.closePath();
 }
-console.log(canvas, ctx); 
+
 
 function arvaaSana() {
     let arvattuSana = document.getElementById("arvattuSana").value;
@@ -101,11 +100,10 @@ function arvaaSana() {
     }
 }
 function arvaaKirjain(arvattavaSana) {
-    document.getElementById("kirjain").focus();  // autofokus kenttään
     // tarkistaa että kirjain löytyykö kirjain sanasta EI ja KYLLÄ
     let kirjain = document.getElementById("kirjain").value;
     let syote = kirjain.toLowerCase();
-    //  kirjaimenTarkistus();
+    kirjaimenTarkistus(syote);
     arvaukset.push(syote);
     let tarkiste = "";
     for (let i = 0; i < arvattavaSana.length; i++) {
@@ -115,6 +113,7 @@ function arvaaKirjain(arvattavaSana) {
         }
     }
     document.getElementById("").innerHTML = syote;
+
     if (tarkiste == "OK") {
         sananTarkistus(arvattavaSana);
     } else {
@@ -122,8 +121,29 @@ function arvaaKirjain(arvattavaSana) {
     }
 }
 
+ function kirjaimenTarkistus(syote) {
+    let tarkiste = ""
+    for (let i = 0;i < arvaukset.length;i++) {
+        if (arvaukset[i] == syote) {
+            tarkiste = "OK"
+        }
+    }
+    for (let i = 0;i < väärinArvatut.length;i++) {
+        if (väärinArvatut[i] == syote) {
+            tarkiste = "ok"
+        }
+    }
+    if (tarkiste == "OK" || tarkiste == "ok") {
+        alert("Kirjain on jo arvattu!");
+        return;
+    } else {
+        return;
+    }
+}
+
 function piirräUkko() {
     let virheet = väärinArvatut.length;
+    virheet += 1;
     ctx.strokeStyle = "black";
     // piirtää palasen
     // köysi
@@ -178,9 +198,7 @@ function piirräUkko() {
     }
 }
 
-// function kirjaimenTarkistus() {
 
-//}
 
 function sananTarkistus(arvattavaSana) {
     //tarkistaa onko kaikki oikeat kirjaimet löydetty
