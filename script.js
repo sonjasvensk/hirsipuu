@@ -107,12 +107,12 @@ function arvaaSana() {
   let arvattuSana = document.getElementById("arvattuSana").value;
   let result = arvattuSana.toLowerCase().trim();
   if (result == arvattavaSana) {
-    voitto(arvattavaSana);
+    voitto();
   } else {
-    gameOver(arvattavaSana);
+    gameOver();
   }
 }
-function arvaaKirjain(arvattavaSana) {
+function arvaaKirjain() {
   // tarkistaa että kirjain löytyykö kirjain sanasta EI ja KYLLÄ
   let kirjain = document.getElementById("kirjain").value;
   let syote = kirjain.toLowerCase();
@@ -128,7 +128,7 @@ function arvaaKirjain(arvattavaSana) {
   if (tarkiste == "OK") {
     arvaukset.push(syote); // siirtää kirjaimen arvattuihin
     paivitaSana();
-    sananTarkistus(arvattavaSana);
+    sananTarkistus();
   } else {
     väärinArvatut.push(syote); // Siirtää kirjaimen väärin arvattuihin
     piirräUkko();
@@ -227,11 +227,11 @@ function piirräUkko() {
 
   if (virheet > 7) {
     // jos virheitä yli 7 (ukko valmis) gameover
-    gameOver(arvattavaSana);
+    gameOver();
   }
 }
 
-function sananTarkistus(arvattavaSana) {
+function sananTarkistus() {
   //tarkistaa onko kaikki oikeat kirjaimet löydetty
   let a = 0;
   for (let i = 0; i < arvattavaSana.length; i++) {
@@ -245,18 +245,18 @@ function sananTarkistus(arvattavaSana) {
   }
   if (a == arvattavaSana.length) {
     //vertaa laskurin arvoa arvattavan sanan pituuteen
-    voitto(arvattavaSana); // Mikäli kaikki kirjaimet oli jo arvattu --> voitto
+    voitto(); // Mikäli kaikki kirjaimet oli jo arvattu --> voitto
   } else {
     return;
   }
 }
 
-function gameOver(arvattavaSana) {
+function gameOver() {
   // 1. Jos arvaa sanan väärin 2. Jos arvaa kirjaimet väärin
   alert("Hävisit pelin! Sana oli: " + arvattavaSana);
 }
 
-function voitto(arvattavaSana) {
+function voitto() {
   // 1. Jos arvaa sanan oikein 2. Jos arvaa kirjaimet oikein
   alert("Onneksi olkoon! Voitit pelin!");
 }
