@@ -99,6 +99,8 @@ function uusiPeli() {
   ctx.lineTo(200, 5);
   ctx.stroke();
   ctx.closePath();
+
+  return arvattavaSana;
 }
 
 function arvaaSana() {
