@@ -131,6 +131,7 @@ function arvaaKirjain(arvattavaSana) {
   if (tarkiste == "OK") {
     arvaukset.push(syote); // siirtää kirjaimen arvattuihin
     sananTarkistus(arvattavaSana);
+    paivitaSana();
   } else {
     väärinArvatut.push(syote); // Siirtää kirjaimen väärin arvattuihin
     piirräUkko();
@@ -148,7 +149,15 @@ function paivitaSana() {
     document.getElementById("arvattavaSana").innerHTML = näyttöSana.trim();
   }
 
-function kirjaimenTarkistus(syote) {
+  function kirjaimenTarkistus(syote) {
+    let tarkiste = "";
+    if (arvaukset.includes(syote) || väärinArvatut.includes(syote)) {
+      alert("Kirjain on jo arvattu!");
+      return;
+    }
+    return true; // Jos kirjain ei ole aiemmin arvattu
+  }
+/* function kirjaimenTarkistus(syote) {
   let tarkiste = "";
   for (let i = 0; i < arvaukset.length; i++) {
     if (arvaukset[i] == syote) {
@@ -165,8 +174,8 @@ function kirjaimenTarkistus(syote) {
     return;
   } else {
     return;
-  }
-}
+  } */
+
 
 function piirräUkko() {
   let virheet = väärinArvatut.length;
