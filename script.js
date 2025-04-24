@@ -68,7 +68,7 @@ let kirjaimet = [
 ];
 let väärinArvatut = []; //vaihdoin taulukoksi
 let arvaukset = []; //vaihdoin taulukoksi
-let arvattavaSana = "";
+let arvattavaSana = "sana";
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 ctx.strokeStyle = "black";
@@ -121,9 +121,10 @@ function arvaaKirjain(arvattavaSana) {
   let tarkiste = "";
   for (let i = 0; i < arvattavaSana.length; i++) {
     if (syote == arvattavaSana[i]) {
-      document.getElementById("").innerHTML = arvattavaSana[i];
       tarkiste = "OK";
     }
+
+    document.getElementById("arvattavaSana").innerHTML = arvattavaSana[i];
   }
   document.getElementById("").innerHTML = syote;
 
