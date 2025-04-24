@@ -100,7 +100,7 @@ function uusiPeli() {
   ctx.stroke();
   ctx.closePath();
 
-  return arvattavaSana;
+  paivitaSana();
 }
 
 function arvaaSana() {
@@ -127,14 +127,14 @@ function arvaaKirjain() {
 
   if (tarkiste == "OK") {
     arvaukset.push(syote); // siirtää kirjaimen arvattuihin
-    paivitaSana(syote);
+    paivitaSana();
     sananTarkistus();
   } else {
     väärinArvatut.push(syote); // Siirtää kirjaimen väärin arvattuihin
     piirräUkko();
   }
 }
-function paivitaSana(syote) {
+function paivitaSana() {
     let näyttöSana = '';
     for (let i = 0; i < arvattavaSana.length; i++) {
       if (arvaukset.includes(arvattavaSana[i])) {
