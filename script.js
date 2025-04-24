@@ -127,14 +127,14 @@ function arvaaKirjain() {
 
   if (tarkiste == "OK") {
     arvaukset.push(syote); // siirtää kirjaimen arvattuihin
-    paivitaSana();
+    paivitaSana(syote);
     sananTarkistus();
   } else {
     väärinArvatut.push(syote); // Siirtää kirjaimen väärin arvattuihin
     piirräUkko();
   }
 }
-function paivitaSana() {
+function paivitaSana(syote) {
     let näyttöSana = '';
     for (let i = 0; i < arvattavaSana.length; i++) {
       if (arvaukset.includes(arvattavaSana[i])) {
