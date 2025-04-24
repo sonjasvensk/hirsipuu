@@ -219,8 +219,8 @@ function sananTarkistus(arvattavaSana) {
   let a = 0;
   for (let i = 0; i < arvattavaSana.length; i++) {
     // käy kaikki sanan kirjaimet läpi yksitellen
-    for (let i = 0; i < arvaukset.length; i++) {
-      if (arvattavaSana[i] == arvaukset[i]) {
+    for (let j = 0; j < arvaukset.length; j++) {
+      if (arvattavaSana[i] == arvaukset[j]) {
         // tarkistaa kuinka moni kirjain löytyy jo arvatut taulukosta
         a++; // laskuri laskee kaikki kirjaimet jotka on jo arvattu
       }
