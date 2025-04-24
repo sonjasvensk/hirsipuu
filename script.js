@@ -127,8 +127,8 @@ function arvaaKirjain(arvattavaSana) {
 
   if (tarkiste == "OK") {
     arvaukset.push(syote); // siirtää kirjaimen arvattuihin
-    sananTarkistus(arvattavaSana);
     paivitaSana();
+    sananTarkistus(arvattavaSana);
   } else {
     väärinArvatut.push(syote); // Siirtää kirjaimen väärin arvattuihin
     piirräUkko();
