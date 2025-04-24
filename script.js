@@ -156,7 +156,6 @@ function kirjaimenTarkistus(syote) {
 
 function piirräUkko() {
   let virheet = väärinArvatut.length;
-  virheet += 1;
   ctx.strokeStyle = "black";
   // piirtää palasen
   // köysi
