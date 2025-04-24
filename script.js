@@ -136,6 +136,17 @@ function arvaaKirjain(arvattavaSana) {
     piirräUkko();
   }
 }
+function paivitaSana() {
+    let näyttöSana = '';
+    for (let i = 0; i < arvattavaSana.length; i++) {
+      if (arvaukset.includes(arvattavaSana[i])) {
+        näyttöSana += arvattavaSana[i] + ' ';
+      } else {
+        näyttöSana += '_ ';
+      }
+    }
+    document.getElementById("arvattavaSana").innerHTML = näyttöSana.trim();
+  }
 
 function kirjaimenTarkistus(syote) {
   let tarkiste = "";
