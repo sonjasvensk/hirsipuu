@@ -115,7 +115,7 @@ function arvaaKirjain(arvattavaSana) {
   let kirjain = document.getElementById("kirjain").value;
   let syote = kirjain.toLowerCase();
   kirjaimenTarkistus(syote);
-  arvaukset.push(syote);
+  
   let tarkiste = "";
   for (let i = 0; i < arvattavaSana.length; i++) {
     if (syote == arvattavaSana[i]) {
@@ -126,8 +126,10 @@ function arvaaKirjain(arvattavaSana) {
   document.getElementById("").innerHTML = syote;
 
   if (tarkiste == "OK") {
+    arvaukset.push(syote); // siirtää kirjaimen arvattuihin
     sananTarkistus(arvattavaSana);
   } else {
+    väärinArvatut.push(syote); // Siirtää kirjaimen väärin arvattuihin
     piirräUkko();
   }
 }
