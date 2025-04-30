@@ -143,7 +143,7 @@ function paivitaSana() {
     let teksti = "";
 
     for (let i = 0; i < väärinArvatut.length; i++) {
-      teksti += teksti + " " + "<del>" + väärinArvatut[i] + "</del>"; 
+      teksti += " " + "<del>" + väärinArvatut[i] + "</del>"; 
     }
     document.getElementById("arvatutKirjaimet"). innerHTML = teksti;
   }
