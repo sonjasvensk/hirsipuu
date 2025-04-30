@@ -35,6 +35,18 @@ let sanat = [
   "projektipäällikkö",
   "analytiikka",
 ];
+let vinkit = [
+  "Rakenne, jossa tieto tallennetaan taulukoihin ja yhdistetään avaimilla",
+  "Suunnittelee IT-ratkaisuja isossa kuvassa.",
+  "Nyrkkisääntö tai kokemusperäinen menetelmä.",
+  "Asiakaslähtöinen tapa kehittää palveluita.",
+  "Asiakaslähtöinen tapa kehittää palveluita.",
+  "Tallentaa usein käytettyä tietoa nopeuttaakseen toimintaa.",
+  "Sovellus toimii erillään käyttöjärjestelmästä.",
+  "Skriptauskieli, jolla tehdään verkkosivut dynaamisiksi.",
+  "Johtaa tiimiä ja aikatauluttaa työt.",
+  "Tietojen keräämistä ja tulkitsemista päätöksenteon tueksi."
+];
 let kirjaimet = [
   //vaihdoin nämä srtingeiksi
   "a",
