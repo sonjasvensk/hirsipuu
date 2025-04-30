@@ -40,6 +40,7 @@ let vinkit = [
   "Suunnittelee IT-ratkaisuja isossa kuvassa.",
   "Nyrkkisääntö tai kokemusperäinen menetelmä.",
   "Asiakaslähtöinen tapa kehittää palveluita.",
+  "Funktioon annettava arvo."
   "Tallentaa usein käytettyä tietoa nopeuttaakseen toimintaa.",
   "Sovellus toimii erillään käyttöjärjestelmästä.",
   "Skriptauskieli, jolla tehdään verkkosivut dynaamisiksi.",
