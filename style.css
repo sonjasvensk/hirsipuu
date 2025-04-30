@@ -17,13 +17,15 @@ body {
     float: left;
     /*margin-left: 250px;*/
     text-align: center;
-    width: 50%;
+    width: 40%;
+    margin-left: 10%;
 }
 .ukko {
     float:left;
     /*margin-right: 400px;*/
-    width: 50%;
+    width: 40%;
     text-align: center;
+    margin-right: 10% ;
 }
 
 .finger-paint-regular {
