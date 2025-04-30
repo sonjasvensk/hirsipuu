@@ -273,6 +273,7 @@ function sananTarkistus() {
 function gameOver() {
   // 1. Jos arvaa sanan väärin 2. Jos arvaa kirjaimet väärin
   alert("Hävisit pelin! Sana oli: " + arvattavaSana);
+  uusiPeli();
 }
 
 function voitto() {
