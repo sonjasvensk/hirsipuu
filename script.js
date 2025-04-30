@@ -111,6 +111,7 @@ function arvaaSana() {
   } else {
     gameOver();
   }
+  document.getElementById("arvattuSana").value= "";
 }
 function arvaaKirjain() {
   // tarkistaa että kirjain löytyykö kirjain sanasta EI ja KYLLÄ
