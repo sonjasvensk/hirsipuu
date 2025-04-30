@@ -40,7 +40,6 @@ let vinkit = [
   "Suunnittelee IT-ratkaisuja isossa kuvassa.",
   "Nyrkkisääntö tai kokemusperäinen menetelmä.",
   "Asiakaslähtöinen tapa kehittää palveluita.",
-  "Asiakaslähtöinen tapa kehittää palveluita.",
   "Tallentaa usein käytettyä tietoa nopeuttaakseen toimintaa.",
   "Sovellus toimii erillään käyttöjärjestelmästä.",
   "Skriptauskieli, jolla tehdään verkkosivut dynaamisiksi.",
@@ -104,6 +103,8 @@ function uusiPeli() {
   ctx.closePath();
 
   paivitaSana();
+
+  document.getElementById("arvatutKirjaimet").innerHTML= "";
 }
 
 function arvaaSana() {
