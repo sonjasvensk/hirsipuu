@@ -68,7 +68,7 @@ let kirjaimet = [
 ];
 let väärinArvatut = []; //vaihdoin taulukoksi
 let arvaukset = []; //vaihdoin taulukoksi
-let arvattavaSana = "sana";
+let arvattavaSana = "";
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 ctx.strokeStyle = "black";
@@ -133,6 +133,7 @@ function arvaaKirjain() {
     väärinArvatut.push(syote); // Siirtää kirjaimen väärin arvattuihin
     piirräUkko();
   }
+  document.getElementById("kirjain").value= "";
 }
 function paivitaSana() {
     let näyttöSana = '';
