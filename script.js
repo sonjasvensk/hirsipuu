@@ -71,16 +71,7 @@ let arvaukset = []; //vaihdoin taulukoksi
 let arvattavaSana = "";
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
-ctx.strokeStyle = "black";
-ctx.beginPath();
-ctx.moveTo(20, 300);
-ctx.lineTo(300, 300);
-ctx.moveTo(200, 5);
-ctx.lineTo(200, 300);
-ctx.moveTo(90, 5);
-ctx.lineTo(200, 5);
-ctx.stroke();
-ctx.closePath();
+
 
 function uusiPeli() {
   // Tyhjentää pelikentän, hakee pelattavan sanan  + piirtää puun
