@@ -104,7 +104,7 @@ function uusiPeli() {
 
   paivitaSana();
 
-  document.getElementById("arvatutKirjaimet").innerHTML= "";
+  document.getElementById("arvatutKirjaimet").innerHTML= "<br>";
 }
 
 function arvaaSana() {
