@@ -1,0 +1,18 @@
+h2 {
+    font-size: 45px;
+}
+body {
+    background-color: beige;
+    text-align: center;
+    margin-top: 70px;
+
+}
+
+.container {
+    float: left;
+    margin-left: 250px;
+    text-align: left;
+}
+.ukko {
+    margin-right: 400px;
+}

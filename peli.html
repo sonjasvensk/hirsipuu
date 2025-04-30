@@ -4,31 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link href="style.css" rel="stylesheet">
     <title>Peli</title>
 </head>
 
 <body>
     <h2>Hirsipuu</h2>
-    <div>
+    <div class="container">
+    <br>
     <label>Syötä kirjain:</label>
         <input type="text" id="kirjain" maxlength="1" autofocus size="1">
         <button onclick="arvaaKirjain()">Arvaa kirjain</button>
-    </div>
-    <div>
+        <br>
+        <br>
         <label>Arvaa sana:  </label>
         <input type="text" id="arvattuSana" size="8">
         <button onclick="arvaaSana()">Arvaa sana</button>
-    </div>
-    
-    <canvas id="canvas" width="320" height="310" style="border:1px solid grey"></canvas>
-    <br>
-    <br>
-    
-    <p id="arvattavaSana"></p>
-    <p id="arvatutKirjaimet"></p>
+        <br>
+        <br>
+        <p id="arvattavaSana"></p>
+    <p id="arvatutKirjaimet"><br></p> 
     <button onclick="uusiPeli()">Uusi peli</button>
+</div>
+
+    
+    <div class= "ukko"><canvas id="canvas" width="320" height="310" style="border:1px solid grey"></canvas>
+    <br>
+    <br>
     <script src="script.js"></script> <!--Siirsin tänne, koska html pitää latautua ennen js, muuten puu ei näy-->
+</div>
 </body>
 
 </html>
