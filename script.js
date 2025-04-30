@@ -261,3 +261,5 @@ function voitto() {
   // 1. Jos arvaa sanan oikein 2. Jos arvaa kirjaimet oikein
   alert("Onneksi olkoon! Voitit pelin!");
 }
+
+window.onload = uusiPeli;
