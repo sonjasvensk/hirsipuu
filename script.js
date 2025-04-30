@@ -136,14 +136,14 @@ function paivitaSana() {
         näyttöSana += '_ ';
       }
     }
-    document.getElementById("arvattavaSana").innerHTML = näyttöSana.trim();
+    document.getElementById("arvattavaSana").innerHTML = näyttöSana.trim().toUpperCase();
   }
 
   function arvatutKirjaimet(syote) {
     let teksti = "";
 
     for (let i = 0; i < väärinArvatut.length; i++) {
-      teksti += " " + "<del>" + väärinArvatut[i] + "</del>"; 
+      teksti += " " + "<del>" + väärinArvatut[i].toUpperCase() + "</del>"; 
     }
     document.getElementById("arvatutKirjaimet"). innerHTML = teksti;
   }
