@@ -117,7 +117,7 @@ function arvaaKirjain() {
   let kirjain = document.getElementById("kirjain").value;
   let syote = kirjain.toLowerCase();
   kirjaimenTarkistus(syote);
-  
+  arvatutKirjaimet(syote);
   let tarkiste = "";
   for (let i = 0; i < arvattavaSana.length; i++) {
     if (syote == arvattavaSana[i]) {
@@ -145,6 +145,15 @@ function paivitaSana() {
       }
     }
     document.getElementById("arvattavaSana").innerHTML = näyttöSana.trim();
+  }
+
+  arvatutKirjaimet(syote) {
+    let teksti = "";
+
+    for (let i = 0; i < väärinArvatut.length; i++) {
+      teksti += teksti + " " + "<del>" + väärinArvatut[i] + "</del>"; 
+    }
+    document.getElementById("arvatutKirjaimet"). innerHTML = teksti;
   }
 
   function kirjaimenTarkistus(syote) {
