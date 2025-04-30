@@ -92,7 +92,7 @@ function uusiPeli() {
   väärinArvatut = []; //tyhjentää väärinarvatut
   ctx.clearRect(0, 0, canvas.width, canvas.height); //tyhjentää pelikentän
   //puu
-  ctx.strokeStyle = "black";
+  ctx.strokeStyle = "white";
   ctx.beginPath();
   ctx.moveTo(20, 300);
   ctx.lineTo(300, 300);
@@ -196,7 +196,7 @@ function paivitaSana() {
 
 function piirräUkko() {
   let virheet = väärinArvatut.length;
-  ctx.strokeStyle = "black";
+  ctx.strokeStyle = "white";
   // piirtää palasen
   // köysi
   if (virheet == 1) {
