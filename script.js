@@ -147,7 +147,6 @@ function paivitaSana() {
   }
 
   function kirjaimenTarkistus(syote) {
-    let tarkiste = "";
     if (arvaukset.includes(syote) || väärinArvatut.includes(syote)) {
       alert("Kirjain on jo arvattu!");
       return;
