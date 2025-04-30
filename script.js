@@ -116,6 +116,11 @@ function arvaaSana() {
   }
   document.getElementById("arvattuSana").value= "";
 }
+function annaVinkki () {
+  let indeksi = sanat.indexOf(arvattavaSana);
+  let vinkki = vinkit[indeksi];
+  alert(vinkki);
+}
 function arvaaKirjain() {
   // tarkistaa että kirjain löytyykö kirjain sanasta EI ja KYLLÄ
   let kirjain = document.getElementById("kirjain").value;
